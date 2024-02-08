@@ -2,3 +2,8 @@
 Définition de variables Sass, par exemple :
    $color: #282c34;
 */
+
+@font-face {
+   font-family: 'American Typewrite';
+   src: url('./fonts/American-typewriter.ttf') format('truetype');
+ }
