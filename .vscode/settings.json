@@ -31,8 +31,10 @@
     "markdown": "html",
     "ejs": "html"
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "cSpell.words": [
     "airbnb"
   ],
+  "prettier.endOfLine": "cr",
+  "files.eol": "\n",
 }

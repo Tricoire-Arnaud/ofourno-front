@@ -1,0 +1,41 @@
+//  .home-phone .header {
+//   align-self: stretch;
+//   flex: 1;
+//   flex-grow: 1;
+//   max-height: 50px;
+//   max-width: 430px;
+//   min-height: 50px;
+//   min-width: 266px;
+//   position: relative;
+//   width: 100%;
+//  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; 
+}
+.connexion {
+  background: #9CB7C9;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 16,45px;
+  padding: 6px;
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+}
+.list {
+  align-items: center;
+  background-color: #9cb7c9;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 37px;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 12px 10px;
+  position: relative;
+}
