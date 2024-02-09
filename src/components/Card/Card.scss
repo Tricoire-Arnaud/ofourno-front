@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+
+.SectionCard {
+  width: 100%;
+  height: 100%;
+  padding-left: 13px;
+  padding-right: 13px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  display: inline-flex;
+}
+
+.Card1, .Card2 {
+  flex: '1 1 0';
+  align-self: stretch;
+  border-radius: 15px;
+  border: 2px #350503 solid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.card-image, .Image2 {
+  align-self: stretch;
+  height: 75px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.VectorImage1, .VectorImage2 {
+  align-self: stretch;
+  height: 75px;
+  border-radius: 15px;
+}
+
+.TextDish {
+  align-self: stretch;
+  flex: '1 1 0';
+  text-align: center;
+  color: #9CB7C9;
+  font-size: 14px;
+  font-family: 'Arial Rounded MT Bold';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.SectionRateComment {
+  align-self: stretch;
+  height: 22.50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.RateComment {
+  flex: '1 1 0';
+  align-self: stretch;
+  padding-left: 17px;
+  padding-right: 17px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Rate {
+  width: 15px;
+  height: 12.38px;
+  position: relative;
+}
+
+.VectorRate {
+  width: 15px;
+  height: 11.60px;
+  left: 0;
+  top: 0.39px;
+  position: absolute;
+  background: #FFF994;
+}
+
+.Comment {
+  color: #9CB7C9;
+  font-size: 10px;
+  font-family: 'American Typewriter';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Chevronright {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+.VectorChevronright {
+  width: 10.94px;
+  height: 20.31px;
+  left: 7.03px;
+  top: 2.34px;
+  position: absolute;
+  background: #350503;
+  border: 1px #350503 solid;
+}
