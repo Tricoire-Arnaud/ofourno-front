@@ -1,41 +1,61 @@
-//  .home-phone .header {
-//   align-self: stretch;
-//   flex: 1;
-//   flex-grow: 1;
-//   max-height: 50px;
-//   max-width: 430px;
-//   min-height: 50px;
-//   min-width: 266px;
-//   position: relative;
-//   width: 100%;
-//  }
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly; 
-}
-.connexion {
-  background: #9CB7C9;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 16,45px;
-  padding: 6px;
+// Importation des variables définies dans le fichier _variables.scss
+@import '../../styles/variables';
+
+// Style pour le composant Header
+.Header {
+  width: 100%; // Largeur à 100%
+  min-width: 230px; // Largeur minimale à 230px
+  height: 100%; // Hauteur à 100%
+  justify-content: space-between; // Espacement entre les éléments
+  align-items: center; // Centrage vertical des éléments
+  display: inline-flex; // Affichage en flex inline
+  padding: 0px $padding-large; // Padding à 0px en haut et en bas, et $padding-large à gauche et à droite
 }
 
-.logo {
-  height: 120px;
-  width: 120px;
+// Style pour le composant List
+.List {
+  width: $common-width; // Largeur définie par la variable $common-width
+  height: $common-height; // Hauteur définie par la variable $common-height
+  padding: $padding-medium; // Padding défini par la variable $padding-medium
+  background: $primary-color; // Couleur de fond définie par la variable $primary-color
+  border-radius: 10px; // Rayon de la bordure à 10px
+  overflow: hidden; // Cache les éléments débordants
+  flex-direction: column; // Les éléments s'empilent verticalement
+  justify-content: center; // Centrage vertical des éléments
+  align-items: center; // Centrage horizontal des éléments
+  display: inline-flex; // Affichage en flex inline
 }
-.list {
-  align-items: center;
-  background-color: #9cb7c9;
-  border-radius: 10px;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 37px;
-  justify-content: space-around;
-  overflow: hidden;
-  padding: 12px 10px;
-  position: relative;
+
+// Style pour le composant Vector1
+.Vector1 {
+  width: $common-width; // Largeur définie par la variable $common-width
+  height: 18px; // Hauteur à 18px
+  background: $primary-color; // Couleur de fond définie par la variable $primary-color
+}
+
+// Style pour le composant ConnexionButton
+.ConnexionButton {
+  width: $common-width; // Largeur définie par la variable $common-width
+  height: $common-height; // Hauteur définie par la variable $common-height
+  padding: $padding-small; // Padding défini par la variable $padding-small
+  background: $primary-color; // Couleur de fond définie par la variable $primary-color
+  border-radius: 10px; // Rayon de la bordure à 10px
+  overflow: hidden; // Cache les éléments débordants
+  flex-direction: column; // Les éléments s'empilent verticalement
+  justify-content: space-between; // Espacement entre les éléments
+  align-items: center; // Centrage horizontal des éléments
+  display: inline-flex; // Affichage en flex inline
+}
+
+// Style pour le composant Vector2
+.Vector2 {
+  align-self: stretch; // L'élément s'étire pour occuper tout l'espace disponible
+  flex: 1 1 0; // L'élément peut grandir et rétrécir, avec une base à 0
+  background: $primary-color; // Couleur de fond définie par la variable $primary-color
+}
+
+// Style pour le composant logo
+.logo {
+  height: $logo-size; // Hauteur définie par la variable $logo-size
+  width: $logo-size; // Largeur définie par la variable $logo-size
 }

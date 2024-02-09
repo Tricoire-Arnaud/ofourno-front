@@ -1,27 +1,32 @@
-import React from 'react';
-import list from '../../assets/list.svg';
-import Logo from '../../assets/logo.svg';
-import Connexion from '../../assets/connexion.svg';
+// Importation des dépendances nécessaires
+import React from 'react'; // Bibliothèque React
+import MenuBurger from '../../assets/Vector1.svg'; // Image SVG pour le menu burger
+import Logo from '../../assets/logo.svg'; // Image SVG pour le logo
+import Connexion from '../../assets/Vector2.svg'; // Image SVG pour le bouton de connexion
 
-import './Header.scss';
+import './Header.scss'; // Importation du fichier de styles CSS pour ce composant
 
+// Définition du composant Header
 function Header() {
+  // Le composant retourne une structure JSX
   return (
-    <div className="header">
-      <img className="list" src={list} alt="Menu liste déroulante" />
-      <img className="logo" src={Logo} alt="Logo" />
-      <img className="connexion" src={Connexion} alt="Connexion" />
+    // Un div parent avec la classe "Header"
+    <div className="Header">
+      {/* Un div pour la liste avec une image pour le menu burger */}
+      <div className="List">
+        <img className="Vector1" src={MenuBurger} alt="Vector1" />
+      </div>
+      {/* Un div pour le logo */}
+      <div>
+        <img className="logo" src={Logo} alt="Logo" />
+      </div>
+      {/* Un div pour le bouton de connexion avec une image */}
+      <div className="ConnexionButton">
+        <img className="Vector2" src={Connexion} alt="Vector2" />
+      </div>
     </div>
   );
 }
 
+// Exportation du composant Header pour qu'il puisse être utilisé dans d'autres fichiers
 export default Header;
-
-<div className="Header" style={{width: '100%', height: '100%', paddingLeft: 42, paddingRight: 42, justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
-    <div className="List" style={{height: 37, paddingLeft: 10, paddingRight: 10, paddingTop: 12, paddingBottom: 12, background: '#9CB7C9', borderRadius: 10, overflow: 'hidden', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
-        <div className="Vector" style={{width: 16.45, height: 13.45, background: 'white', borderRadius: 50}}></div>
-    </div>
-    <div className="ConnexionButton" style={{width: 37, height: 37, padding: 6, background: '#9CB7C9', borderRadius: 10, overflow: 'hidden', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center', display: 'inline-flex'}}>
-        <div className="Vector" style={{alignSelf: 'stretch', flex: '1 1 0', background: 'white'}}></div>
-    </div>
-</div>
