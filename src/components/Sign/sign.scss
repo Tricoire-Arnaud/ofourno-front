@@ -12,14 +12,14 @@
 .SignComplete {
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-  display: flex;
+  align-items: center;
+  display: inline-flex;
+  position: relative;
 }
 
 .Sign {
   width: 189.60px;
-  height: 60px;
+
 }
 
 .TextSign {
@@ -28,4 +28,6 @@
   font-family: 'American Typewriter';
   font-weight: 400;
   word-wrap: break-word;
+  text-align: center;
+  position: absolute;
 }
