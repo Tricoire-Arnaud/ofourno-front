@@ -14,6 +14,11 @@ $font-size-large: 32px;
 $font-size-small: 16px;
 
 @font-face {
-   font-family: 'American Typewrite';
+   font-family: 'American Typewriter';
    src: url('./fonts/American-typewriter.ttf') format('truetype');
+ }
+
+ @font-face {
+ font-family: 'Arial Rounded MT Bold';
+ src: url('./fonts/Arial-Rounded-MT-Bold.ttf') format('truetype');
  }
