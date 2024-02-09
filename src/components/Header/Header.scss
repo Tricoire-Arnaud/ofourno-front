@@ -37,7 +37,7 @@
 .ConnexionButton {
   width: $common-width; // Largeur définie par la variable $common-width
   height: $common-height; // Hauteur définie par la variable $common-height
-  padding: $padding-small; // Padding défini par la variable $padding-small
+  padding: 6px; // Padding défini par la variable $padding-small
   background: $primary-color; // Couleur de fond définie par la variable $primary-color
   border-radius: 10px; // Rayon de la bordure à 10px
   overflow: hidden; // Cache les éléments débordants
