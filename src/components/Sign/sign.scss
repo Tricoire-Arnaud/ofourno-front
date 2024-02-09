@@ -1,0 +1,31 @@
+.SectionSign {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.SignComplete {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.Sign {
+  width: 189.60px;
+  height: 60px;
+}
+
+.TextSign {
+  color: #350503;
+  font-size: 14px;
+  font-family: 'American Typewriter';
+  font-weight: 400;
+  word-wrap: break-word;
+}
