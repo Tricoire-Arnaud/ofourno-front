@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .SectionSign {
   width: 100%;
   height: 100%;
@@ -19,11 +21,10 @@
 
 .Sign {
   width: 189.60px;
-
 }
 
 .TextSign {
-  color: #350503;
+  color: $font-color-third;
   font-size: 14px;
   font-family: 'American Typewriter';
   font-weight: 400;
