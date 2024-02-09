@@ -1,4 +1,24 @@
-/*
-Définition de variables Sass, par exemple :
-   $color: #282c34;
-*/
+// Définition des variables
+$primary-color: #9CB7C9;
+$secondary-color: #ECA457;
+$padding-small: 16px;
+$padding-medium: 10px;
+$padding-large: 15px;
+$common-width: 37px;
+$common-height: 37px;
+$logo-size: 120px;
+$font-primary: 'Arial Rounded MT Bold';
+$font-secondary: 'American Typewriter';
+$font-color-third: #350503;
+$font-size-large: 32px;
+$font-size-small: 16px;
+
+@font-face {
+   font-family: 'American Typewriter';
+   src: url('./fonts/American-typewriter.ttf') format('truetype');
+ }
+
+ @font-face {
+ font-family: 'Arial Rounded MT Bold';
+ src: url('./fonts/Arial-Rounded-MT-Bold.ttf') format('truetype');
+ }

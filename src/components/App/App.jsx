@@ -1,26 +1,21 @@
-import logo from '../../assets/logo.svg';
+import React from 'react';
+import Header from '../Header/Header';
+import SearchBar from '../SearchBar/SearchBar';
+import HeroSection from '../Herosection/HeroSection';
+import Sign from '../Sign/Sign';
+import Card from '../Card/Card';
+import '../../styles/_variables.scss';
 
 import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <p>
-          Edit <code>src/components/App/App.jsx</code> and save to reload.
-        </p>
-
-        <a
-          className="App-link"
-          href="https://react.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home-phone">
+      <Header />
+      <SearchBar />
+      <HeroSection />
+      <Sign />
+      <Card />
     </div>
   );
 }
