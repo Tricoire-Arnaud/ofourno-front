@@ -4,9 +4,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.suggest.showKeywords": false
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.detectIndentation": true,
   "editor.rulers": [80],
+  "liveshare.languages.allowGuestCommandControl": true,
   "editor.tabSize": 2,
   "files.exclude": {
     "USE_GITIGNORE": true
