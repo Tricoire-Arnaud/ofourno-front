@@ -1,0 +1,9 @@
+@import '../../styles/variables';
+
+.category-title {
+  font-size: 2em;
+  margin: 40px 0px;
+  font-family: $font-primary;
+  color: $tertiary-color;
+  text-align: center;
+}

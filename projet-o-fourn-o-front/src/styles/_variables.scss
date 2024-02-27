@@ -1,0 +1,29 @@
+// Définition des variables
+$primary-color: #9cb7c9;
+$secondary-color: #eca457;
+$tertiary-color: #350503;
+$padding-small: 12px;
+$padding-medium: 16px;
+$padding-large: 20px;
+$common-width: 37px;
+$common-height: 37px;
+$logo-size: 120px;
+$font-primary: 'Arial Rounded MT Bold';
+$font-secondary: 'American Typewriter';
+$font-color-third: #350503;
+$font-size-large: 32px;
+$font-size-medium: 24px;
+$font-size-small: 16px;
+
+@font-face {
+  font-family: 'American Typewriter';
+  src: url('./fonts/American-typewriter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Arial Rounded MT Bold';
+  src: url('./fonts/Arial-Rounded-MT-Bold.ttf') format('truetype');
+}
+
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;

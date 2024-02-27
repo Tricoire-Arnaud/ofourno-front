@@ -1,0 +1,152 @@
+@import '../../styles/variables';
+
+.heroSectionComplet {
+  margin: $padding-large 0;
+  min-height: 250px;
+  width: 100%;
+  padding: 0 $padding-medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    background: none !important;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 20px;
+    gap: 30px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    background: none !important;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 40px;
+    gap: 30px;
+  }
+}
+
+.textContainer {
+  @media (min-width: $breakpoint-tablet) {
+    width: 50%;
+    padding-left: 10px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 50%;
+    padding-left: 40px;
+  }
+}
+
+.heroImageContainer {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    display: block;
+    width: 50%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+    width: 50%;
+  }
+}
+
+.heroImage {
+  width: 50%;
+  height: auto;
+  padding-left: 0px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 85%;
+  }
+}
+
+.titreHeroSection,
+.paragrapheHeroSection {
+  flex: 1;
+  color: $font-color-third;
+  font-family: $font-primary;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.titreHeroSection {
+  font-size: $font-size-large;
+  margin-bottom: 15px;
+  margin-top: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    align-self: flex-start;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    align-self: flex-start;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+.paragrapheHeroSection {
+  font-size: $font-size-small;
+  margin-bottom: 15px;
+  text-align: justify;
+
+  @media (min-width: $breakpoint-tablet) {
+    align-self: flex-start;
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    align-self: flex-start;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+}
+
+.buttonHeroSection {
+  width: 60%;
+  height: 40px;
+  padding: $padding-small;
+  background: $secondary-color;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: $font-size-small;
+  font-family: $font-secondary;
+  font-weight: 700;
+  border: none;
+
+  &:hover {
+    background-color: darken(#eca457, 10%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.5);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    align-self: flex-start;
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    align-self: flex-start;
+    width: 250px;
+    height: 40px;
+    font-size: 20px;
+  }
+}

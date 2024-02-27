@@ -1,0 +1,193 @@
+@import '../../styles/variables';
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.7em;
+  font-family: $font-primary;
+  align-items: center;
+  margin-top: 20px;
+  background-color: transparent;
+  border: none;
+  color: $font-color-third;
+}
+
+.ingredients-profil {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: $font-primary;
+  background-color: #9cb7c952;
+  border: 3px solid $primary-color;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.title-ingredients {
+  font-size: 1.5em;
+  font-family: $font-primary;
+  color: $font-color-third;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ingredient-search-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.ingredient-search-right {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sectionCard {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.recipes-favorites {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-primary;
+  background-color: #eca45745;
+  border: 3px solid $secondary-color;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.recipes-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.suggest-recipes {
+  width: 33%; // Largeur de 40%
+  height: 50px; // Hauteur de 45px
+  padding: $padding-small; // Padding défini par une variable
+  background-color: white; // Couleur d'arrière-plan définie par une variable
+  border-radius: 10px; // Coins arrondis avec un rayon de 10px
+  display: flex; // Utilisation de flexbox pour l'agencement des éléments
+  align-items: center; // Centrage vertical des éléments
+  justify-content: center; // Centrage horizontal des éléments
+  color: $tertiary-color; // Couleur du texte en blanc
+  font-size: $font-size-medium; // Taille de la police définie par une variable
+  font-family: $font-secondary; // Famille de police définie par une variable
+  font-weight: 700; // Poids de la police à 700 (gras)
+  border: 2px solid $tertiary-color;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.search-term-bubble {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid $tertiary-color;
+  border-radius: 40px;
+}
+.search-results-count{
+  padding-left: 10px;
+}
+.remove-term {
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-recipes {
+  display: inline-flex;
+  align-items: end;
+}
+
+.button-search {
+  background-color: $primary-color;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: $font-size-small;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+}
+@media (max-width: 600px) {
+  .tabs, .ingredients-profil, .recipes-favorites {
+    font-size: 1em;
+  }
+
+  .ingredient-search-left, .ingredient-search-right, .suggest-recipes {
+    width: 100%; // Utiliser toute la largeur disponible
+    padding-top: 0;
+    justify-content: center;
+    margin-top: 20px; // Réduire l'espacement
+  }
+
+  .suggest-recipes {
+    width: 80%; // Ajuster pour une meilleure visibilité
+    height: auto; // Permettre à la hauteur de s'adapter au contenu
+    padding: 10px; // Ajuster le padding
+    font-size: 0.9em; // Ajuster la taille de la police
+  }
+  .title-ingredients {
+    text-align: center;
+  }
+
+
+  .recipes-card {
+    flex-direction: column; // Empiler les cartes verticalement
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .ingredient-search-left, .ingredient-search-right {
+    width: 100%; // Permettre à chaque élément de prendre toute la largeur
+  }
+  .tabs, .ingredients-profil, .recipes-favorites {
+    font-size: 1em;
+  }
+
+  .suggest-recipes {
+    width: 50%; // Ajuster la largeur pour les tablettes
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 901px) {
+  .ingredient-search-left, .ingredient-search-right {
+    width: 100%; // Permettre à chaque élément de prendre toute la largeur
+  }
+  .tabs, .ingredients-profil, .recipes-favorites {
+    font-size: 1.2em;
+  }
+
+  .suggest-recipes {
+    width: 50%; // Ajuster la largeur pour les tablettes
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,19 @@
+// Importation des styles de réinitialisation et des variables
+@use 'reset';
+@use 'variables' as v;
+
+// Styles pour l'élément body
+body {
+	margin: 0; // Suppression des marges par défaut
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif; // Définition de la police de caractères
+	-webkit-font-smoothing: antialiased; // Lissage des polices pour WebKit
+	-moz-osx-font-smoothing: grayscale; // Lissage des polices pour Firefox sur macOS
+}
+
+// Styles pour l'élément code
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace; // Définition de la police de caractères pour les éléments de code
+}

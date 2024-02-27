@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+
+  .content {
+    text-align: center;
+
+    h1 {
+      font-size: $font-size-large;
+      font-family: $font-primary;
+      color: $tertiary-color;
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: $font-size-small;
+      font-family: $font-secondary;
+      color: $tertiary-color;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 150px;
+      height: $common-height;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: $secondary-color;
+      border-radius: 10px;
+      border: none;
+      transition: background-color 0.3s ease;
+      font-family: $font-secondary;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+.img-error {
+  width: 320px;
+  height: auto;
+}

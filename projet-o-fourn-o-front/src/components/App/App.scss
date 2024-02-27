@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+html, body {
+  height: 100%; // Important pour étendre le body à la hauteur de la fenêtre du navigateur
+  margin: 0; // Supprime la marge par défaut du navigateur
+}
+
+.home-phone {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.Footer {
+  flex-shrink: 0;
+}
+.searchBar-mobile {
+  @media (min-width: $breakpoint-desktop) {
+    display: none !important;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.terms {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.terms-title {
+  font-size: 2em;
+  margin: 40px 0px;
+  font-family: $font-primary;
+  color: $tertiary-color;
+  text-align: center;
+}
+
+.terms-subtitle {
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: $font-primary;
+  color: $tertiary-color;
+  text-align: center;
+}
+
+.terms-paragraph {
+  color: #666;
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: $font-secondary;
+}
+
+.terms-paragraph:last-child {
+  margin-bottom: 0;
+}

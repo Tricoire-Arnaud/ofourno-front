@@ -1,0 +1,64 @@
+// Importation des variables de style globales
+@import '../../styles/variables.scss';
+
+// Style du conteneur principal du pied de page
+.footer {
+  align-items: center;
+  margin-top: 20px;
+  background-color: $font-color-third;
+  border-radius: 50px 50px 0 0;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  width: 100%; // Assurez-vous que le pied de page prend toute la largeur
+  flex-shrink: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+.Instagram, .Facebook, .Xlogo {
+  width: auto;
+  height: 40px;
+
+  &:hover {
+    opacity: 0.5; // Réduit l'opacité à 0.5 lorsque la souris passe sur l'image
+  }
+}
+
+// Style du conteneur du texte du pied de page
+.footer .text-footer {
+  align-items: flex-start; // Alignement des éléments au haut du conteneur
+  align-self: stretch; // L'élément s'étend pour prendre toute la hauteur disponible
+  display: flex; // Utilisation de flexbox pour l'agencement des éléments
+  flex: 1; // Prend toute l'espace disponible
+  flex-direction: column; // Les éléments sont disposés en colonne
+  flex-grow: 1; // Permet à l'élément de grandir pour prendre l'espace disponible
+  justify-content: space-between; // Espacement égal entre les éléments
+  padding: 15px 0px; // Padding de 15px en haut et en bas
+  position: relative; // Positionnement relatif pour permettre le positionnement absolu des enfants
+}
+
+// Style du texte des liens du pied de page
+.footer .text-wrapper, .footer .text-wrapper a, .div, .div a {
+  align-self: stretch;
+  color: white;
+  font-family: $font-secondary;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.5; // Réduit l'opacité à 0.5 lorsque la souris passe sur le lien
+  }
+}

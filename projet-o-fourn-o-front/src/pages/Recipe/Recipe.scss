@@ -1,0 +1,568 @@
+@import '../../styles/variables';
+
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-primary;
+  color: #333;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.recipe-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row !important;
+    align-items: flex-start;
+  }
+}
+
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  color: $tertiary-color;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  h1 {
+    font-size: $font-size-medium;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-left: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 36px;
+      align-self: center;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 38px;
+      align-self: center;
+      margin-top: 50px;
+    }
+  }
+
+  .recipe-details {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-gap: 10px;
+    width: 100%;
+    padding: 0;
+    align-items: start;
+    justify-items: start;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 45%;
+      margin-top: 20px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 45%;
+      margin-top: 20px;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      grid-gap: 10px;
+      width: 100%;
+      padding: 0;
+      align-items: center;
+      row-gap: 20px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      white-space: nowrap; 
+      margin-bottom: 10px;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: $font-size-small;
+      }
+
+      span[role="img"] {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.recipe-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 50%;
+  }
+  
+  img {
+    object-fit: cover;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 30px -30px 0px 0px #ECA457;
+  }
+}
+
+
+
+.sign-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 150px;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 40%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 35%;
+  }
+
+
+  .sign-image {
+    width: 100%;
+    height: 100px;
+  }
+
+  .sign-title {
+    position: absolute;
+    color: $font-color-third;
+    font-size: 18px;
+    font-family: $font-secondary;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: $font-size-medium;
+    }
+  }
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ingredient-id {
+  flex-basis: calc(33.33% - 10px);
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-basis: calc(25% - 10px);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-basis: calc(20% - 10px);
+  }
+}
+
+.recipe, .recipe-info, .recipe-image, .recipe-top {
+  flex-direction: column;
+  width: 100%;
+}
+h1, .recipe-details li, .ingredient-text, .ustensil-text, .instructions-text {
+  font-size: smaller;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .recipe, .recipe-info, .recipe-image, .recipe-top {
+    flex-direction: column;
+    width: 100%;
+  }
+  h1, .recipe-details li, .ingredient-text, .ustensil-text, .instructions-text {
+    font-size: smaller;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .recipe, .recipe-info, .recipe-image, .recipe-top {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  h1, .recipe-details li, .ingredient-text, .ustensil-text, .instructions-text {
+    font-size: medium;
+  }
+}
+
+.ingredient-id img {
+  width: 50%;
+  height: auto;
+}
+
+.ingredient-text {
+  font-family: $font-primary;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.3;
+  color: $font-color-third;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 18px;
+  }
+}
+
+.ustensil-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ustensil-id {
+  flex-basis: calc(33.33% - 10px);
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-basis: calc(25% - 10px);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex-basis: calc(20% - 10px);
+  }
+}
+
+.ustensil-id img {
+  width: 50%;
+  height: auto;
+}
+
+.ustensil-text {
+  font-family: $font-primary;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.3;
+  color: $font-color-third;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 18px;
+  }
+}
+
+.instructions-text {
+  font-family: $font-primary;
+  font-size: 16px;
+  color: $font-color-third;
+}
+
+.preparation {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.instruction-container {
+  display: flex;
+  align-items: center;
+
+  .instructions-text {
+    color: $font-color-third;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: $font-size-medium;
+    }
+    }
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    border:1px dotted $font-color-third; 
+    border-radius: 1px ;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+
+    &:checked {
+      background-color: $secondary-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: $secondary-color;
+        transform: translate(-50%, -50%);
+      }
+
+      + label .instructions-text {
+        background-color: rgba(red($secondary-color), green($secondary-color), blue($secondary-color), 0.3);
+        margin: 5px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+
+  @media (min-width: $breakpoint-tablet) {
+    .recipe-middle {
+      display: grid;
+      grid-template-areas:
+        'ingredients utensils'
+        'preparation preparation';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 20px;
+    }
+  
+    .ingredients-recipe {
+      grid-area: ingredients;
+      padding-right: 25px;
+    }
+  
+    .utensils-recipe {
+      grid-area: utensils;
+      padding-left: 0px;
+    }
+
+    .ingredients-recipe,
+    .utensils-recipe {
+      width: 100%; // Prend la totalité de la largeur de sa zone de grille
+    }
+
+    .ingredient-list, .ustensil-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: start;
+      gap: 10px;
+    }
+
+    .ingredient-list,
+    .ustensil-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: start;
+      gap: 10px;
+    }
+
+    .ingredient-id,
+  .ustensil-id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .ingredient-id img,
+  .ustensil-id img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .ingredient-text,
+  .ustensil-text {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  
+    .preparation {
+      grid-area: preparation;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    .recipe-middle {
+      display: grid;
+      grid-template-areas:
+        'ingredients preparation'
+        'utensils preparation';
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  
+    .ingredients-recipe, .utensils-recipe {
+      width: 100%;
+    }
+  
+    .ingredient-list, .ustensil-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: start;
+      gap: 10px;
+    }
+
+    .ingredient-id, .ustensil-id {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .ingredient-id img, .ustensil-id img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .ingredient-text, .ustensil-text {
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .preparation {
+      grid-area: preparation;
+    }
+  }
+
+.review-list {
+  .review-id {
+    color : $font-color-third;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border: 2px solid $secondary-color;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    .review-text {
+      margin: 5px;
+    }
+    .review-comment {
+      margin: 10px 0px;
+      font-family: $font-secondary;
+    }
+    .review-stars {
+      color: $secondary-color;
+      font-size: 20px;
+    }
+  }
+  .round-button {
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+    background: #eca457;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-family: "American Typewriter";
+    font-weight: 700;
+    border: none;
+    margin: 0 auto;
+  }
+}
+
+.review-form {
+  color : $font-color-third;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  border: 2px solid $secondary-color;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 20px;
+
+  h3 {
+    margin: 5px;
+  }
+
+  label {
+    margin: 10px 0px;
+    font-family: $font-secondary;
+  }
+
+  select {
+    color: $secondary-color;
+    font-size: 20px;
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 15px;
+  }
+
+  select, textarea {
+    color: $secondary-color;
+    font-size: 14px;
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+  }
+
+  textarea {
+    height: 100px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  button {
+    width: 50%;
+    height: 45px;
+    padding: 10px;
+    background: #eca457;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-family: "American Typewriter";
+    font-weight: 700;
+    border: none;
+    margin: 0 auto;
+  }
+}

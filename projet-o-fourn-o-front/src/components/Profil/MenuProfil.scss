@@ -1,0 +1,104 @@
+@import '../../styles/variables';
+
+.menu-profil {
+  position: relative;
+  height: auto;
+  z-index: 10;
+}
+
+.list-profil2 {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.profil-button {
+  width: $common-width;
+  height: $common-height;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $padding-medium;
+  background: $primary-color;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease; // Ajout de cette ligne pour animer le changement de couleur de fond
+
+  &:hover {
+    background-color: rgba(
+      $primary-color,
+      0.7
+    ); // Couleur de fond lors du survol avec une transparence de 50%
+  }
+}
+
+.list-menu2 {
+  position: absolute;
+  right: 0; // Positionnez cet élément à droite de 'menu-profil'
+  top: 100%; // Positionnez cet élément juste en dessous de 'menu-profil'
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 30px 30px;
+  border-radius: 10px;
+  border: 2px solid $primary-color;
+}
+
+.item-list2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #350503;
+  transition: background-color 0.3s ease, border-radius 0.3s ease; // Ajoute une animation de transition pour la couleur de fond et le border-radius
+
+  &:hover {
+    background-color: rgba(
+      $secondary-color,
+      0.5
+    ); // Couleur de fond lors du survol avec une transparence de 50%
+    border-radius: 20px; // Ajoute une bordure arrondie lors du survol
+  }
+}
+
+.list-text2 {
+  text-align: justify;
+  color: #9cb7c9;
+  font-size: 16px;
+  font-family: 'American Typewriter';
+  font-weight: 700;
+  word-wrap: break-word;
+  padding: 10px;
+  width: 100%;
+}
+
+.list-Arrow2 {
+  color: #9cb7c9;
+  word-wrap: break-word;
+  padding: 10px;
+  align-self: flex-end; // Ajout de cette propriété pour placer la flèche à la fin de la Frame1
+}
+
+.welcomeProfil {
+  padding-bottom: 10px;
+
+  p {
+    color: $primary-color;
+    font-size: 14px;
+    font-family: "American Typewriter";
+    font-weight: 700;
+  }
+
+  span{
+    color: $secondary-color;
+  }
+}

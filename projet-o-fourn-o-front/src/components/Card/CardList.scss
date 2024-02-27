@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.cardList {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  justify-content: center;
+}
+
+.cardList .card {
+  flex: 1 0 50%; // Chaque carte prendra au moins 50% de l'espace disponible
+  max-width: 100%; // Et ne dépassera pas 50% de l'espace disponible
+
+  @media (min-width: $breakpoint-tablet) {
+    flex: 1 0 25%;
+    max-width: 100%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    flex: 1 0 20%;
+    max-width: 100%;
+  }
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (min-width: $breakpoint-desktop) {
+    display: none;
+  }
+}
+
+.chevron-left {
+  left: 0;
+}
+
+.chevron-right {
+  right: 0;
+}

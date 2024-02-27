@@ -1,0 +1,241 @@
+@import '../../styles/variables';
+
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 50px;
+
+  .banner-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    gap: 5px;
+
+    @media (min-width: $breakpoint-desktop) {
+      gap: 5px;
+    }
+
+    .banner-text {
+      font-family: $font-primary;
+      font-size: 20px;
+      color: $tertiary-color;
+      text-align: center;
+      margin-bottom: 5px;
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 25px;
+        padding-bottom: 15px;
+      }
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 40px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .banner-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 70%;
+      max-width: 800px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 70%;
+      max-width: 800px;
+    }
+  }
+}
+
+.registration-form {
+  .form-title {
+    font-family: $font-secondary;
+    font-weight: bold;
+    font-size: $font-size-small;
+    color: $tertiary-color;
+    text-align: center;
+    margin: 20px 0px;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 25px;
+      padding: 15px 0px;
+    }
+  }
+
+  form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .input-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-bottom: 1.8px solid $tertiary-color;
+        background-color: transparent;
+        margin-bottom: 5px;
+
+        &:required {
+          box-shadow: none;
+        }
+
+        &::placeholder {
+          font-family: $font-secondary;
+          color: #aaa;
+
+          @media (min-width: $breakpoint-desktop) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .icon {
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+
+        &.email-icon {
+          background-image: url('../src/assets/img/email.png');
+        }
+        &.user-icon {
+          background-image: url('../src/assets/img/pseudo.png');
+        }
+        &.lock-icon {
+          background-image: url('../src/assets/img/password.png');
+        }
+        &.calendar-icon {
+          background-image: url('../src/assets/img/birthdate.png');
+        }
+      }
+    }
+
+    .register-button {
+      width: 40%;
+      height: 45px;
+      padding: $padding-small;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border: 2px solid $primary-color;
+      border-radius: 10px;
+      font-family: $font-primary;
+      color: $primary-color;
+      font-size: $font-size-small;
+      transition: background-color 0.3s ease;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.info-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.info-section {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0;
+
+    @media (min-width: $breakpoint-tablet) {
+      width: 90px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 100px;
+    }
+  }
+
+  .text-content {
+    display: block;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet) {
+      max-width: 50%;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      max-width: 35%;
+    }
+
+    h2 {
+      font-size: $font-size-small;
+      font-family: $font-primary;
+      color: $tertiary-color;
+      margin-bottom: 8px;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 20px;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-family: $font-primary;
+      font-size: 12px;
+      color: $secondary-color;
+      line-height: 1.3;
+      margin-bottom: 50px;
+
+      @media (min-width: $breakpoint-tablet) {
+        font-size: 15px;
+        padding-bottom: 0px;
+        text-align: justify;
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 15px;
+        padding-bottom: 0px;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.right-aligned {
+  align-self: flex-end;
+  justify-content: right;
+
+  .text-content {
+    text-align: right;
+  }
+}

@@ -1,0 +1,107 @@
+// Importation des variables de style globales
+@import '../../styles/variables';
+
+// Styles pour le composant Header
+.header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px $padding-large;
+  flex-wrap: wrap;
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: space-around;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    justify-content: space-between;
+    padding-bottom: 20px;
+    flex-wrap: nowrap;
+  }
+}
+
+.searchBar-desktop {
+  display: none;
+
+  @media (min-width: $breakpoint-tablet) {
+    justify-content: center;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    display: block;
+  }
+}
+
+.profilButton {
+  width: $common-width;
+  height: $common-height;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $primary-color;
+  border-radius: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.7);
+  }
+}
+
+.logo {
+  height: $logo-size;
+  width: $logo-size;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .logo {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .logo {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+.connexionButton{
+  width: 12%;
+  height: 37px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #9cb7c9;
+  border-radius: 10px;
+  border: none;
+  gap: 5px;
+  transition: background-color 0.3s ease; 
+  color: white;
+  font-size: 14px;
+  font-family: "American Typewriter";
+  font-weight: 700;
+
+  &:hover {
+    background-color: rgba(
+      $primary-color,
+      0.7
+    );
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: $common-height;
+    width: 16%;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 40px;
+    width: 16%;
+  }
+}

@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.filter-btn {
+  background-color: #E1DAD9;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 0px;
+  font-family: $font-primary;
+  font-size: $font-size-small;
+  text-align: left;
+  color: $tertiary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-btn .arrow {
+  color: $tertiary-color;
+}
+
+.filter-btn.active {
+  background-color: $primary-color;
+}
+
+.search-results-heading {
+  font-family: $font-primary;
+  color: $tertiary-color;
+  margin: 16px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.filters hr {
+  border: none;
+  border-top: 1.5px solid $tertiary-color;
+  margin: 15px 0;
+}
+
+.filter-list {
+  font-family: $font-secondary;
+  font-size: $font-size-small;
+  color: $tertiary-color;
+  margin-top: 10px;
+}
+
+.filter-checkbox {
+  color: $tertiary-color;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.submit-btn {
+  width: 30%;
+  height: 40px;
+  padding: $padding-small;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $tertiary-color;
+  font-size: $font-size-small;
+  font-family: $font-primary;
+  border: 2px solid $primary-color;
+  margin-top: 15px;
+  margin: auto;
+  }

@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+
+.card-result-container {
+  border-top: 2px solid #350503;
+  border-bottom: 2px solid #350503;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  margin: 15px;
+  flex-direction: row;
+
+  .card-result-image {
+    width: 40%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+}
+
+.card-result-link {
+  display: flex;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.card-result-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+
+  .card-result-title {
+    color: $primary-color;
+    font-size: $font-size-small;
+    font-family: $font-primary;
+    margin-right: 5px;
+  }
+}
+
+.card-result-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-result-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.card-result-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 20px;
+
+  p {
+    color: $primary-color;
+    padding-left: 10px;
+  }
+}
+
+.card-result-star {
+  color: $secondary-color;
+}
+
+.favorite-icon {
+  cursor: pointer;
+  color: rgb(211, 211, 211); // couleur par défaut
+
+  &.favorited {
+    color: red; // couleur lorsque favorisé
+  }
+}

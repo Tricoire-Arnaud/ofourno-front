@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+.home-phone .search-bar {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: space-around;
+  max-height: 40px;
+  min-height: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  font-size: 1rem;
+  border: none; // supprime la bordure
+  width: 100%;
+  height: 25px; // augmente la hauteur
+  text-align: center;
+  margin-left: 6px;
+
+  &:focus {
+    outline: none;
+    border: none; // supprime la bordure lors de la mise au point
+  }
+}
+
+.search-bar-wrapper {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: space-around;
+  max-width: 430px;
+  position: relative;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  border: 2px solid $primary-color;
+  border-radius: 10px;
+  gap: 7px;
+  margin-left: -20.5px;
+  margin-right: -20.5px;
+  padding: 4px 0px;
+  width: 300px;
+}
+
+.search-button {
+  border: none; // change la bordure
+  border-radius: 10px;
+  background-color: white; // change la couleur de fond
+  margin: 5px; // change la marge
+
+  &:hover {
+    background-color: rgba($primary-color, 0.3);
+  }
+
+  .iconSearch {
+    height: 22px;
+    position: relative;
+    text-align: center;
+    padding-right: 3px;
+    padding-top: 2px;
+    color: $primary-color;
+  }
+}

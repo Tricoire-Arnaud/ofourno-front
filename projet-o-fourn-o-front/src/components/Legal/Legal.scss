@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.legal {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.legal-title {
+  color: #333;
+  font-size: 2em;
+  margin: 40px 0px;
+  font-family: $font-primary;
+  color: $tertiary-color;
+  text-align: center;
+}
+
+.legal-paragraph {
+  color: #666;
+  font-size: 0.875em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: $font-secondary;
+}
+
+.legal-paragraph:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,151 @@
+@import '../../styles/variables.scss';
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modalContainer {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 2px solid $secondary-color;
+}
+
+.connexionForm {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+
+  input {
+    // Utilisation de flexbox pour aligner les éléments horizontalement
+    display: flex;
+    // Centrage vertical des éléments
+    align-items: center;
+    // Fond blanc
+    background-color: #ffffff;
+    // Bordure de 2px de couleur #9cb7c9
+    border: none;
+    // Arrondissement des coins
+    // Espacement entre les éléments
+    gap: 7px;
+    // Marges négatives pour déborder du parent
+    // Padding vertical
+    padding: 20px;
+    // Position relative pour le positionnement absolu des enfants
+    position: relative;
+    width: 100%;
+  }
+
+  .submitConnexion {
+    width: 70%; // Largeur de 40%
+    height: 50px; // Hauteur de 45px
+    padding: $padding-small; // Padding défini par une variable
+    background-color: white; // Couleur d'arrière-plan définie par une variable
+    border-radius: 10px; // Coins arrondis avec un rayon de 10px
+    display: flex; // Utilisation de flexbox pour l'agencement des éléments
+    align-items: center; // Centrage vertical des éléments
+    justify-content: center; // Centrage horizontal des éléments
+    color: $tertiary-color; // Couleur du texte en blanc
+    font-size: $font-size-medium; // Taille de la police définie par une variable
+    font-family: $font-secondary; // Famille de police définie par une variable
+    font-weight: 700; // Poids de la police à 700 (gras)
+    border: 2px solid $tertiary-color;
+  }
+
+  .inscriptionLink {
+    font-family: $font-primary;
+    color: $tertiary-color;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
+    font-size: $font-size-small;
+
+    a {
+      color: $tertiary-color;
+      font-family: $font-secondary;
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: $font-size-medium;
+    }
+  }
+  /**
+ * This file contains the SCSS styles for the ConnexionModal component.
+ */
+}
+
+.emailLabel {
+  color: rimary-color; // Change la couleur du texte en gris
+  font-family: 'Arial', sans-serif; // Change la police du texte
+  text-align: center; // Centre le texte
+}
+
+input::placeholder {
+  color: grey; // Change la couleur du placeholder en gris
+  font-family: 'Arial', sans-serif; // Change la police du placeholder
+  text-align: start;
+  color: rgba(128, 128, 128, 0.5);
+  font-family: $font-secondary;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $tertiary-color;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.Forgotpassword {
+  font-family: $font-primary;
+  color: $tertiary-color;
+  text-align: center;
+  margin: 15px 0px;
+  font-size: $font-size-small;
+  text-decoration: underline;
+}
+
+.submitConnexion {
+  transition: background-color 0.3s ease; // Ajoute une animation de transition pour la couleur de fond
+
+  &:hover {
+    background-color: rgba(
+      $secondary-color,
+      0.7
+    ); // Change la couleur de fond lors du survol
+  }
+}
+
+.Forgotpassword,
+.inscriptionLink a {
+  transition: text-decoration 0.3s ease; // Ajoute une animation de transition pour la décoration du texte
+
+  &:hover {
+    text-decoration: underline $secondary-color; // Ajoute une bordure sous le texte lors du survol
+  }
+}
+
+.message-error {
+  display: flex;
+  color: $tertiary-color;
+  font-family: $font-secondary;
+  text-align: center;
+  margin-top: 15px;
+  line-height: 1.5;
+  font-size: $font-size-small;
+  background-color: #ff000040;
+  border-radius: 10px;
+  border: 1px solid red;
+}

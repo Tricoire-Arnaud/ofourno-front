@@ -1,0 +1,100 @@
+@import '../../styles/variables';
+
+.sectionCard {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 0px !important;
+  margin-bottom: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top :10px;
+  justify-content: center;
+  max-width: 187px;
+  transition: transform 0.3s ease-in-out; // Ajoute une transition à la propriété transform
+
+  &:hover {
+    transform: scale(1.05); // Agrandit la carte de 5% lorsque la souris est dessus
+  }
+}
+
+.card {
+  flex: 1;
+  border-radius: 34px;
+  border: 3px solid $font-color-third;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 230px;
+  overflow: hidden;
+}
+
+.vectorImage {
+  height: 65%;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.textDish {
+  text-align: center;
+  color: $primary-color;
+  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: 400;
+  margin-top: 5px;
+  overflow: hidden;
+  padding-bottom: 45px;
+}
+
+.sectionRateComment {
+  display: flex;
+  justify-content: center; // Centrer le bloc rating
+  align-items: center; // Centrer les éléments verticalement
+}
+
+.rateComment {
+  display: flex;
+  align-items: center;
+  justify-content: center; // Centrer les éléments
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.star {
+  color: $secondary-color;
+  font-size: 16px;
+}
+
+.reviewCount {
+  color: $primary-color; /* Remplacez #yourColor par la couleur que vous souhaitez */
+  font-family: $font-primary;
+  font-size: 15px; /* Remplacez 'Your Font Family' par la police de caractères que vous souhaitez */
+}
+.vectorChevronRight {
+  width: 40px;
+  height: 40px;
+  color: $font-color-third;
+}
+
+.favorite-icon {
+  cursor: pointer;
+  color: rgb(211, 211, 211); // couleur par défaut
+  margin-left: 20px;
+
+  &.favorited {
+    color: red; // couleur lorsque favorisé
+  }
+}
+
