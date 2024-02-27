@@ -141,7 +141,7 @@ function MenuProfil() {
               <div className="item-list2">
                 <div className="list-Arrow2">{'<'}</div>
                 <a
-                  href="http://tricoire-arnaud-server.cloud/"
+                  href="http://tricoire-arnaud-server.eddi.cloud/"
                   className="list-text"
                   onClick={handleLinkClick}
                 >
