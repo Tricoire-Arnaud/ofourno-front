@@ -18,7 +18,9 @@ function MenuProfil() {
   const rolesString = localStorage.getItem('roles');
   const roles = rolesString ? rolesString.split(',') : [];
   const hasAdminOrModeratorRole =
-    roles.includes('ROLE_ADMIN') || roles.includes('ROLE_MODERATOR');
+    roles.includes('ROLE_ADMIN') ||
+    roles.includes('ROLE_MODERATOR') ||
+    roles.includes('ROLE_VISITOR');
 
   // Utilisation du hook useNavigate pour gérer la navigation
   const navigate = useNavigate();
