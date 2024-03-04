@@ -143,7 +143,7 @@ function MenuProfil() {
               <div className="item-list2">
                 <div className="list-Arrow2">{'<'}</div>
                 <a
-                  href="http://ofourno-back.arnaudtricoire.com"
+                  href="https://ofourno-back.arnaudtricoire.com"
                   className="list-text"
                   onClick={handleLinkClick}
                 >
