@@ -17,7 +17,6 @@
   }
 
   @media (min-width: $breakpoint-desktop) {
-    justify-content: space-between;
     padding-bottom: 20px;
     flex-wrap: nowrap;
   }
@@ -103,5 +102,29 @@
   @media (min-width: $breakpoint-desktop) {
     height: 40px;
     width: 16%;
+  }
+}
+.navDesktop {
+  display: flex;
+  gap: 10px;
+
+}
+.navHeader {
+  display: flex;
+  font-family: 'American Typewriter';
+}
+.navHeader:hover {
+  border-bottom: 2px solid $primary-color; 
+}
+.navItem {
+display: flex;
+font-weight: 600;
+font-family: 'American Typewriter';
+color: $primary-color;
+padding: 15px;
+}
+@media (max-width: $breakpoint-tablet) { /* Ajustez cette valeur selon vos besoins */
+  .navDesktop {
+    display: none; /* Cache le menu de navigation */
   }
 }
