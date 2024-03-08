@@ -29,8 +29,11 @@ function Recipe() {
   const dispatch = useDispatch();
   const [numReviewsToShow, setNumReviewsToShow] = useState(2);
   const [showMore, setShowMore] = useState(false);
-  const [newReview, setNewReview] = useState({ rating: 0, text: '' });
-  const pseudo = localStorage.getItem('pseudo');
+  const [newReview, setNewReview] = useState({
+    rating: 0,
+    text: '',
+    user_id: '',
+  });
   const { picture } = recipe;
   const fullImageUrl = `${import.meta.env.VITE_IMAGE_BASE_URL}${picture}`;
   const favorites = useSelector((state) => state.favorites);
@@ -94,6 +97,7 @@ function Recipe() {
       .get(`/recipe/${params.id}`, {})
       .then((response) => {
         setRecipe(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         toast.error(`Échec : ${error}`, {
@@ -116,6 +120,17 @@ function Recipe() {
     setNewReview({ ...newReview, [event.target.name]: event.target.value });
   };
 
+  useEffect(() => {
+    // Récupération de l'id utilisateur depuis le localStorage
+    const userId = localStorage.getItem('id'); // Utilisation de la clé 'id'
+    if (userId) {
+      setNewReview((prevReview) => ({
+        ...prevReview,
+        user_id: userId, // Mise à jour du champ user_id avec l'id récupéré
+      }));
+    }
+  }, []);
+
   const handleReviewSubmit = (event) => {
     event.preventDefault();
 
@@ -130,7 +145,7 @@ function Recipe() {
       .post(`/recipes/${params.id}/review/create`, {
         rating: parseInt(newReview.rating),
         text: newReview.text,
-        pseudo: { pseudo },
+        user_id: newReview.user_id, // Assurez-vous d'inclure cela
       })
       .then(() => {
         toast.success('Merci pour votre commentaire !', {
@@ -142,6 +157,11 @@ function Recipe() {
           draggable: true,
           progress: undefined,
         });
+        console.log(newReview);
+        return api.get(`/recipe/${params.id}`); // Rechargez les données de la recette
+      })
+      .then((response) => {
+        setRecipe(response.data); // Mettez à jour l'état avec les nouvelles données
       })
       .catch((error) => {
         toast.error(`Échec : ${error}`, {
@@ -156,7 +176,7 @@ function Recipe() {
       });
 
     // Réinitialisez l'état de newReview pour effacer le formulaire
-    setNewReview({ rating: 0, text: '' });
+    setNewReview({ rating: 0, text: '', user_id: newReview.user_id });
   };
 
   return (
