@@ -30,6 +30,16 @@
 .burgerButton {
   width: 37px;
   height: 37px;
+  display: none;
+}
+/* Styles pour tablettes et mobiles */
+@media (max-width: $breakpoint-tablet) { /* Ajustez cette valeur selon vos besoins */
+  .burgerButton {
+    display: block; /* Affiche le bouton burger */
+  }
+  .navDesktop {
+    display: none; /* Cache le menu de navigation */
+  }
 }
 
 .menu-burger {
