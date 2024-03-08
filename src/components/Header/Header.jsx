@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MenuBurger from './MenuBurger/MenuBurger';
 import MenuProfil from '../Profil/MenuProfil';
 import Logo from '../../assets/img/logo.svg';
@@ -20,11 +20,40 @@ function Header({ onOpenModal }) {
         {/* Le bouton du menu burger */}
         <MenuBurger />
       </div>
+      <div className="navDesktop">
+        <div className="navItem">
+          <NavLink to="/contact" className="navHeader">
+            Apéritif
+          </NavLink>
+        </div>
+        <div className="navItem">
+          <NavLink to="/contact" className="navHeader">
+            Entrée
+          </NavLink>
+        </div>
+        <div className="navItem">
+          <NavLink to="/contact" className="navHeader">
+            Plat Principal
+          </NavLink>
+        </div>
+      </div>
       <div>
         {/* Le logo de l'application, qui est un lien vers la page d'accueil */}
-        <Link to="/" className="logo-link">
+        <NavLink to="/" className="logo-link">
           <img className="logo" src={Logo} alt="Logo du site" />
-        </Link>
+        </NavLink>
+      </div>
+      <div className="navDesktop">
+        <div className="navItem">
+          <NavLink to="/contact" className="navHeader">
+            Dessert
+          </NavLink>
+        </div>
+        <div className="navItem">
+          <NavLink to="/contact" className="navHeader">
+            Contact
+          </NavLink>
+        </div>
       </div>
       <div className="searchBar-desktop">
         <SearchBar />
