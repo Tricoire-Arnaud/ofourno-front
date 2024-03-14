@@ -22,17 +22,17 @@ function Header({ onOpenModal }) {
       </div>
       <div className="navDesktop">
         <div className="navItem">
-          <NavLink to="/contact" className="navHeader">
+          <NavLink to="/category/Aperitif" className="navHeader">
             Apéritif
           </NavLink>
         </div>
         <div className="navItem">
-          <NavLink to="/contact" className="navHeader">
+          <NavLink to="/category/Entree" className="navHeader">
             Entrée
           </NavLink>
         </div>
         <div className="navItem">
-          <NavLink to="/contact" className="navHeader">
+          <NavLink to="/category/Plat-principal" className="navHeader">
             Plat Principal
           </NavLink>
         </div>
@@ -45,7 +45,7 @@ function Header({ onOpenModal }) {
       </div>
       <div className="navDesktop">
         <div className="navItem">
-          <NavLink to="/contact" className="navHeader">
+          <NavLink to="/category/Dessert" className="navHeader">
             Dessert
           </NavLink>
         </div>
