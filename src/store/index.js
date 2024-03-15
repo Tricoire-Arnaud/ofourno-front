@@ -3,7 +3,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 // Importation des reducers
-import rootReducer from '../reducers';
 import favoritesReducer from '../features/favoritesSlice';
 import authReducer from '../features/authSlice';
 import recipesReducer from '../features/recipesSlice';
@@ -12,8 +11,6 @@ import searchReducer from '../reducers/searchReducer';
 // Configuration du store Redux
 const store = configureStore({
   reducer: {
-    // Spread de tous les reducers du rootReducer
-    ...rootReducer,
     // Mapping des autres reducers à leurs clés respectives
     favorites: favoritesReducer,
     auth: authReducer,

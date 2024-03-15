@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
-// Tentez de charger l'état initial à partir de localStorage ou définissez-le à un tableau vide
+// Initialisation du State à partir de localStorage
 const initialState = localStorage.getItem('favorites')
   ? JSON.parse(localStorage.getItem('favorites'))
   : [];
