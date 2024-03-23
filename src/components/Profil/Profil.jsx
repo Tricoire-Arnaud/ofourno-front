@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable react-hooks/exhaustive-deps */
 // Importation des dépendances nécessaires
 import React, { useEffect, useState } from 'react'; // Importation de React et des hooks useEffect et useState
@@ -7,6 +8,7 @@ import { toast } from 'react-toastify'; // Importation de la fonction toast de r
 import { removeSearchTerm } from '../../actions/searchActions'; // Importation de l'action removeSearchTerm
 import updateUserInformation from '../../actions/userActions'; // Importation de l'action updateUserInformation
 import { logout } from '../../features/authSlice'; // Importation de l'action logout
+import { deleteAccountAsync } from '../../features/deleteSlice'; // Importation de l'action deleteAccount
 import {
   fetchAndFilterRecipes,
   clearRecipesResults,
@@ -75,6 +77,29 @@ function Profil() {
       progress: undefined,
     });
     navigate('/'); // Redirige vers la page d'accueil
+  };
+
+  const handleDeleteAccount = () => {
+    const isConfirmed = window.confirm(
+      'Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.'
+    );
+
+    if (isConfirmed) {
+      const userId = localStorage.getItem('id');
+      dispatch(deleteAccountAsync(userId));
+      dispatch(logout()); // Dispatch l'action de déconnexion
+      localStorage.removeItem('token'); // Supprime le token du localStorage
+      toast.success('Suppression réussie. Redirection en cours...', {
+        position: 'top-center',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      navigate('/'); // Redirige vers la page d'accueil
+    }
   };
 
   // Cette fonction supprime un terme de recherche
@@ -310,6 +335,13 @@ function Profil() {
         </div>
       )}
       {/* Le bouton pour se déconnecter */}
+      <button
+        type="button"
+        onClick={handleDeleteAccount}
+        className="suggest-recipes"
+      >
+        Supprimer mon compte
+      </button>
       <button type="button" onClick={handleLogout} className="suggest-recipes">
         Déconnexion
       </button>

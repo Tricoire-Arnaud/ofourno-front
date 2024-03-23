@@ -32,6 +32,12 @@ const authSlice = createSlice({
       state.error = null; // Réinitialisation de l'erreur
       state.token = action.payload; // Stockage du token
     },
+    // Reducer pour la suppression du compte
+    deleteAccount: (state) => {
+      state.status = 'pending';
+      state.error = null;
+      state.token = null;
+    },
   },
 });
 
